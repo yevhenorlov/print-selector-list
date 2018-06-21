@@ -1,0 +1,25 @@
+{
+  "name": "print-selector-list",
+  "version": "1.0.0",
+  "description": "Print component's classes (as CSS selectors) to a file",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "log-to-file": "^1.2.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "component",
+    "selector",
+    "automate",
+    "class",
+    "css",
+    "layout",
+    "log",
+    "bem"
+  ],
+  "author": "Yevhen Orlov",
+  "license": "ISC"
+}
