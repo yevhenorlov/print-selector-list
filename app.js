@@ -18,10 +18,14 @@ function getComponentClassSelectorList(selector) {
   return classSelectorList
 }
 
-export function printSelectorList(selector, path="./selector-list.css") {
+export function printSelectorList(selector, path = './selector-list.css') {
   if (!selector) throw new TypeError('selector argument is required')
   const selectorList = getComponentClassSelectorList(selector)
-  logToFile(selectorList, path)
-  console.log(`selector list saved to ${path}.`)
+  if (path) {
+    logToFile(selectorList, path)
+    console.log(`selector list saved to ${path}.`)
+  } else {
+    JSON.stringify(selectorList, null, 2)
+  }
   return selectorList
 }
