@@ -1,11 +1,8 @@
 {
   "name": "print-selector-list",
   "version": "1.0.2",
-  "description": "Print component's classes (as CSS selectors) to a file",
+  "description": "Print component's classes (as CSS selectors) to a String and return it. Log to console optionally.",
   "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yevhenorlov/print-selector-list.git"
@@ -25,8 +22,5 @@
   "bugs": {
     "url": "https://github.com/yevhenorlov/print-selector-list/issues"
   },
-  "homepage": "https://github.com/yevhenorlov/print-selector-list#readme",
-  "dependencies": {
-    "log-to-file": "^1.2.2"
-  }
+  "homepage": "https://github.com/yevhenorlov/print-selector-list#readme"
 }

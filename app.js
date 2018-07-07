@@ -1,36 +1,22 @@
-const logToFile = require('log-to-file')
-
-function printSelectorList(selector, path = './selector-list.css') {
-  if (!selector) throw new TypeError('selector argument is required')
-
-  const selectorList = getComponentClassSelectorList(selector)
-
-  if (path) {
-    logToFile(selectorList, path)
-    console.log(`selector list saved to ${path}.`)
-  } else {
-    JSON.stringify(selectorList, null, 2)
+function printSelectorList(selector, logToConsole) {
+  const _logToConsole = !!logToConsole || false
+  if (!selector) throw new TypeError('Selector argument is required')
+  if (typeof selector !== 'string') {
+    throw new TypeError('Attribute must be a string')
   }
-
-  return selectorList
-
-  function getComponentClassSelectorList(selector) {
-    if (typeof selector !== 'string') {
-      throw new TypeError('Attribute must be a string')
-    }
-    const component = document.querySelector(selector)
-    const descendants = Array.prototype.slice.call(
-      component.querySelectorAll('*'),
-      0
-    )
-    const classSelectorList = descendants
-      .map(el => {
-        if (!el.classList.length) return
-        return `// .${el.classList} {}`
-      })
-      .filter(el => typeof el !== 'undefined')
-    return classSelectorList
-  }
+  const component = document.querySelector(selector)
+  const descendants = Array.prototype.slice.call(
+    component.querySelectorAll('*'),
+    0
+  )
+  const classSelectorList = descendants
+    .map(el => {
+      if (!el.classList.length) return
+      return `\n// .${el.classList} {}\n`
+    })
+    .filter(el => typeof el !== 'undefined')
+    .join('')
+  if (_logToConsole) console.log(classSelectorList)
+  return classSelectorList
 }
-
 module.exports = printSelectorList
