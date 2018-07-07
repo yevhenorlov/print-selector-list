@@ -1,10 +1,10 @@
-import logToFile from 'log-to-file'
+const logToFile = require('log-to-file')
 
 function printSelectorList(selector, path = './selector-list.css') {
   if (!selector) throw new TypeError('selector argument is required')
 
   const selectorList = getComponentClassSelectorList(selector)
-  
+
   if (path) {
     logToFile(selectorList, path)
     console.log(`selector list saved to ${path}.`)
@@ -13,7 +13,7 @@ function printSelectorList(selector, path = './selector-list.css') {
   }
 
   return selectorList
-  
+
   function getComponentClassSelectorList(selector) {
     if (typeof selector !== 'string') {
       throw new TypeError('Attribute must be a string')
