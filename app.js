@@ -12,12 +12,16 @@ function getComponentClassSelectorList(selector) {
   const classSelectorList = descendants
     .map(el => {
       if (!el.classList.length) return
-      return `.${el.classList}`
+      return `// .${el.classList} {}`
     })
     .filter(el => typeof el !== 'undefined')
   return classSelectorList
 }
 
-function printSelectorList(list, path) {
-  logToFile(list, path)
+export function printSelectorList(selector, path="./selector-list.css") {
+  if (!selector) throw new TypeError('selector argument is required')
+  const selectorList = getComponentClassSelectorList(selector)
+  logToFile(selectorList, path)
+  console.log(`selector list saved to ${path}.`)
+  return selectorList
 }
