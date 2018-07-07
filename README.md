@@ -45,6 +45,6 @@ printSelectorList('.article-section')
 
 printSelectorList accepts 2 attributes:
 
-- **selector** *\[String\]* (mandatory): passed into `document.querySelector`, usually it's the component's wrapper class
+- **selector** *\[String\]* (mandatory): passed into `document.querySelector` (usually it's the component's wrapper class);
 
 - **logToConsole** *\[Boolean\]* (optional): if set to `true`, logs output to console. Default: `false`.
