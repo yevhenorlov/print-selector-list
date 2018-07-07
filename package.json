@@ -21,7 +21,7 @@
     "log"
   ],
   "author": "Yevhen Orlov",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/yevhenorlov/print-selector-list/issues"
   },
