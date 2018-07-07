@@ -3,6 +3,14 @@
 A helper function that accepts a query selector and returns a list of
 selectors as single-line-separated, commented-out lines of CSS. 
 
+## Install
+
+```
+npm install --save-dev print-selector-list
+```
+
+## Usage
+
 Most useful for styling components if you use shallow BEM-like selectors:
 
 ```html
