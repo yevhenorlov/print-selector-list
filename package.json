@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "Print component's classes (as CSS selectors) to a file",
   "main": "app.js",
-  "dependencies": {},
-  "devDependencies": {
-    "log-to-file": "^1.2.2"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yevhenorlov/print-selector-list.git"
   },
   "keywords": [
     "component",
@@ -16,14 +16,17 @@
     "automate",
     "class",
     "css",
+    "bem",
     "layout",
-    "log",
-    "bem"
+    "log"
   ],
   "author": "Yevhen Orlov",
   "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:yevhenorlov/print-selector-list.git"
+  "bugs": {
+    "url": "https://github.com/yevhenorlov/print-selector-list/issues"
+  },
+  "homepage": "https://github.com/yevhenorlov/print-selector-list#readme",
+  "dependencies": {
+    "log-to-file": "^1.2.2"
   }
 }
