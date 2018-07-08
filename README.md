@@ -19,7 +19,7 @@ Most useful for styling components if you use shallow BEM-like selectors:
   <article class="article-section__body">
     Lorem exercitationem minus vel aperiam similique doloribus Assumenda nostrum quasi labore voluptatum veniam esse Exercitationem laborum eaque ex doloremque temporibus delectus Quibusdam voluptatem aut officia ab laudantium, doloribus dolore quod.
     <div class="article-section__body__share-article__wrapper">
-      <button class="article-section__body__share-article__button">
+      <button class="article-section__body__share-article__button btn btn--main">
         <app-icon class="article-section__body__share-article__button__icon"/>
         Share article
       </button>
@@ -47,6 +47,21 @@ printSelectorList('.article-section')
 // .article-section__body__share-article__button__icon {}
 "
 */
+```
+
+Note that printSelectorList returns only the first class in each element's list,
+which is why it is important to list unique classes first, and generic ones
+after that.
+
+```html
+<!-- DO: -->
+
+<button class="article-section__body__share-article__button btn btn--main"></button>
+
+<!-- DON'T: -->
+
+<button class="btn btn--main article-section__body__share-article__button></button>
+
 ```
 
 ## Options
