@@ -56,11 +56,13 @@ after that.
 ```html
 <!-- DO: -->
 
-<button class="article-section__body__share-article__button btn btn--main"></button>
+<button class="article-section__body__share-article__button btn btn--main">
+</button>
 
 <!-- DON'T: -->
 
-<button class="btn btn--main article-section__body__share-article__button></button>
+<button class="btn btn--main article-section__body__share-article__button">
+</button>
 
 ```
 
