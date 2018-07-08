@@ -12,7 +12,7 @@ function printSelectorList(selector, logToConsole) {
   const classSelectorList = descendants
     .map(el => {
       if (!el.classList.length) return
-      return `\n// .${el.classList} {}\n`
+      return `\n// .${el.classList[0]} {}\n`
     })
     .filter(el => typeof el !== 'undefined')
     .join('')
