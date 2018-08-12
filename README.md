@@ -68,7 +68,7 @@ after that.
 
 ## Options
 
-printSelectorList accepts 2 attributes:
+printSelectorList accepts 2 parameters:
 
 - **selector** *\[String\]* (mandatory): passed into `document.querySelector` (usually it's the component's wrapper class);
 
